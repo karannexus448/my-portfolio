@@ -2,7 +2,7 @@ import React from "react";
 
 interface VideoEmbedProps {
   src: string;
-  title?: string;
+  title: string;
 }
 
 const VideoEmbed: React.FC<VideoEmbedProps> = ({ src, title }) => {
@@ -13,8 +13,14 @@ const VideoEmbed: React.FC<VideoEmbedProps> = ({ src, title }) => {
         frameBorder="0"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
-        style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-        title={title || "Embedded video"}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+        }}
+        title={title}
       ></iframe>
     </div>
   );
